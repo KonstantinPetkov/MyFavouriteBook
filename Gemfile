@@ -48,3 +48,8 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'              # use PostgreSQL in production (Heroku)
+  gem 'rails_12factor'  # Heroku-specific production settings
+end
+
