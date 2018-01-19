@@ -6,8 +6,6 @@ gem 'rails', '4.2.10'
 
 #use Haml for templates
 gem 'haml'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,10 +32,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+ruby '2.3.0'   # just in case - tell Heroku which Ruby version we need
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3' # use SQLite only in development and testing
 end
 
 group :development do
